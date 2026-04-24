@@ -35,12 +35,12 @@ public class Factorial {
 
 		//YOUR CODE STARTS HERE
 
-		 // Wait for user number input
 		 try{
+			 // Wait for user number input
 			 String userNumberString= scanner.nextLine();
 			 int userNumber = Integer.parseInt(userNumberString);
 
-			//  Check if number is valid
+			// Check if number is valid (positive AND between 1 and 10)
 			 if (userNumber >= 1 && userNumber <=10){
 				 return userNumber;
 			 }
@@ -54,7 +54,6 @@ public class Factorial {
 			 this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
 			 return -1;
 		 }
-
 
 		//YOUR CODE ENDS HERE
 		 
@@ -72,8 +71,10 @@ public class Factorial {
 		 
 		int result = 1;
 		//YOUR CODE STARTS HERE
-		//  Offset loop by 1
-		 for (int i = 1; i < num+1; i++) {
+
+		//  Offset loop by 1, so it goes from 1 to the desired number (inclusive).
+		 for (int i = 1; i <= num; i++) {
+			 // Calculate factorial
 			 result *= i;
 		 }
 
